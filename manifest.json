@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "YT-Music Thumbnail Fixer",
+  "description": "Fixes size for song images",
+  "version": "1.1",
+
+  "icons": {
+    "128": "yt_music_icon.png"
+  },
+
+  "web_accessible_resources": [{
+    "resources": ["script.js"],
+    "matches": ["https://music.youtube.com/*"]
+  }],
+
+  "content_scripts": [
+      {
+        "run_at": "document_end",
+        "matches": ["https://music.youtube.com/*"],
+        "js":["script.js"]
+      }
+  ]
+}
